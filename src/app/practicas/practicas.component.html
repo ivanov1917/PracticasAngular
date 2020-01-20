@@ -1,0 +1,35 @@
+
+<div class="container">
+    <button class="btn btn-warning"(click)="show=!show">ngIf</button>
+    <p class="text-info" *ngIf="show">
+      Prueba ngIfAngular
+    </p>
+  
+    <button class="btn btn-warning"(click)="activo=!activo">ngClass</button>
+    <p class="text-info"[ngClass]="activo">Hellow wordl</p>
+  
+  
+    <h2>ngFor</h2>
+    <ul>
+      <li *ngFor="let gods of diosesHindues">{{gods}}</li>
+    </ul>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Edad</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let animals of animales;index as i">
+            <td>{{i}}</td>
+            <td>{{animals.nombre}}</td>
+            <td>{{animals.tipo}}</td>
+            <td>{{animals.edad}}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div >
